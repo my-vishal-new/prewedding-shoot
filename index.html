@@ -160,7 +160,10 @@
                                         <div data-swiper-parallax="400" class="slide-text wow fadeInUp"
                                             data-wow-duration="1600ms">
                                             <p>Our Big Day is March 6,2024</p>
-                                            <audio src="assets/ringtone/theme-music.mp3"></audio>
+                                            <audio autoplay src="assets/ringtone/theme-music.mp3" id="myAudio"></audio>
+                                            <button class=" view-cart-btn" style="
+                                            display: inline-block;" type="submit" id="playButton">Play Audio</button>
+                                            
                                         </div>
                                         <span class="shape wow fadeInUp" data-wow-duration="1400ms"><img
                                                 src="assets/images/slider/date-shape.png" alt=""> </span>
@@ -860,21 +863,28 @@
     }, 1000);
 
     //for ringtone audio
-    window.addEventListener("DOMContentLoaded", event => {
-    const audio = document.querySelector("audio");
-    audio.play();
-});
+   
 
-window.addEventListener("load", event => {
-    const audio = document.querySelector("audio");
-    audio.play();
-});
+    window.addEventListener("DOMContentReady", event => {
+        const audio = document.querySelector("audio");
+        audio.play();
+    });
 
-window.addEventListener("beforeunload", event => {
-    const audio = document.querySelector("audio");
-    audio.play();
-});
+    window.addEventListener("load", event => {
+        const audio = document.querySelector("audio");
+        audio.play();
+    });
 
+
+    function playAudio() {
+        var audio = document.getElementById('myAudio');
+        audio.muted = false; // Unmute the audio
+        audio.play(); // Start playback
+    }
+
+    // Add event listener to the button
+    document.getElementById('playButton').addEventListener('click', playAudio);
+</script>
 
     </script>
 
