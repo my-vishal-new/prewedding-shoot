@@ -160,6 +160,7 @@
                                         <div data-swiper-parallax="400" class="slide-text wow fadeInUp"
                                             data-wow-duration="1600ms">
                                             <p>Our Big Day is March 6,2024</p>
+                                            <audio src="assets/ringtone/theme-music.mp3"></audio>
                                         </div>
                                         <span class="shape wow fadeInUp" data-wow-duration="1400ms"><img
                                                 src="assets/images/slider/date-shape.png" alt=""> </span>
@@ -848,8 +849,8 @@
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
       // Output the result in an element with id="demo"
-      document.getElementById("my-clock").innerHTML = days + "d " + hours + "h "
-      + minutes + "m " + seconds + "s ";
+      document.getElementById("my-clock").innerHTML = days + ":" + hours + ":"
+      + minutes + ":" + seconds + " ";
         
       // If the count down is over, write some text 
       if (distance < 0) {
@@ -857,6 +858,24 @@
         document.getElementById("my-clock").innerHTML = "Got Married";
       }
     }, 1000);
+
+    //for ringtone audio
+    window.addEventListener("DOMContentLoaded", event => {
+    const audio = document.querySelector("audio");
+    audio.play();
+});
+
+window.addEventListener("load", event => {
+    const audio = document.querySelector("audio");
+    audio.play();
+});
+
+window.addEventListener("beforeunload", event => {
+    const audio = document.querySelector("audio");
+    audio.play();
+});
+
+
     </script>
 
     <!-- All JavaScript files
