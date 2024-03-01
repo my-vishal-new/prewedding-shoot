@@ -13038,7 +13038,7 @@ a.ui-button:active, .ui-button:active,
 .wpo-couple-section-s6 .middle-couple-pic,
 .wpo-couple-section-s7 .middle-couple-pic {
   width: 450px;
-  height: auto;
+  /* height: auto; */
   margin: 0;
   padding: 0;
   -webkit-box-shadow: none;
@@ -14119,11 +14119,11 @@ a.ui-button:active, .ui-button:active,
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 300px) {
   .wpo-couple-section-s5 .middle-couple-pic-wrap .middle-couple-pic,
   .wpo-couple-section-s6 .middle-couple-pic-wrap .middle-couple-pic,
   .wpo-couple-section-s7 .middle-couple-pic-wrap .middle-couple-pic {
-    max-width: 250px;
+    max-width: 198px;
   }
 }
 
